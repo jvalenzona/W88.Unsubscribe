@@ -1,0 +1,8 @@
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\W88.Unsubscribe.exe
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\W88.Unsubscribe.dll
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\W88.Unsubscribe.deps.json
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\W88.Unsubscribe.runtimeconfig.json
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\W88.Unsubscribe.pdb
+D:\Unsubsribe\W88.Unsubscribe\obj\Release\net6.0\PubTmp\Out\en\W88.Unsubscribe.resources.dll

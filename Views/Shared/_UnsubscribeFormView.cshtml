@@ -1,0 +1,21 @@
+﻿@model UnsubscribeFormViewModel
+
+<div style="margin-top: 10px;">
+    <div>
+        <b><p style="font-size:larger">@Model.UnsubscribeMsg</p></b>
+    </div>
+    <div style="margin-top: 10px;">
+        <img src=~/images/icon-email-unsubcribe.png />
+    </div>
+
+    <div class="form-floating mb-3" style="margin-top: 15px;">
+        <input id="emailField" type="email" class="form-control" placeholder="name@example.com">
+        <label for="floatingInput">@Model.EmailPlaceholder</label>
+    </div>
+    <div class="d-grid gap-2 unsubsBtnDiv">
+        <button id="unsubsBtn" class="btn btn-primary unsubsBtn" type="button">@Model.UnsubscribeBtn</button>
+        <button id="loadingBtn" class="btn btn-primary unsubsBtn" style="visibility: visible; display: none;">
+            <span class="spinner-border spinner-border-sm"></span>
+        </button>
+    </div>
+</div>

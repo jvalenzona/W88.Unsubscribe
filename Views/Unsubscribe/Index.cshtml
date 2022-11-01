@@ -1,0 +1,293 @@
+﻿
+@{
+    ViewData["Title"] = "Unsubscribe";
+}
+
+
+<form>
+    <div class="card">
+        <div class="card-body">
+            <div>
+            <nav style="width:max-content;">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-en-tab" data-bs-toggle="tab" data-bs-target="#nav-en" type="button" role="tab" aria-controls="nav-en" aria-selected="true">EN</button>
+                    <button class="nav-link" id="nav-cn-tab" data-bs-toggle="tab" data-bs-target="#nav-cn" type="button" role="tab" aria-controls="nav-cn" aria-selected="false">CN</button>
+                    <button class="nav-link" id="nav-id-tab" data-bs-toggle="tab" data-bs-target="#nav-id" type="button" role="tab" aria-controls="nav-id" aria-selected="false">ID</button>
+                    <button class="nav-link" id="nav-th-tab" data-bs-toggle="tab" data-bs-target="#nav-th" type="button" role="tab" aria-controls="nav-th" aria-selected="false">TH</button>
+                    <button class="nav-link" id="nav-vn-tab" data-bs-toggle="tab" data-bs-target="#nav-vn" type="button" role="tab" aria-controls="nav-vn" aria-selected="false">VN</button>
+                </div>
+            </nav>
+                <div class="tab-content" id="nav-tabContent" style="padding-top: 18px; padding-bottom: 18px;">
+                <div class="tab-pane fade show active" id="nav-en" role="tabpanel" aria-labelledby="nav-en-tab" tabindex="0">
+                    <div style="margin-top: 10px;">
+                        <div>
+                                <b><p style="font-size:larger">Do you want to unsubscribe?</p></b>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <img src=~/images/icon-email-unsubcribe.png />
+                        </div>
+
+                        <div class="form-floating mb-3" style="margin-top: 15px;">
+                            <input id="emailField" type="email" class="form-control" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                            <div class="d-grid gap-2 unsubsBtnDiv">
+                                <button id="unsubsBtn" class="btn btn-primary unsubsBtn" type="button">UNSUBSCRIBE</button>
+                                <button id="loadingBtn" class="btn btn-primary unsubsBtn" style="visibility: visible; display: none;">
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                   
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-cn" role="tabpanel" aria-labelledby="nav-cn-tab" tabindex="0">
+                        <div style="margin-top: 10px;">
+                            <div>
+                                <b><p style="font-size:larger">您确定要取消订阅吗?</p></b>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <img src=~/images/icon-email-unsubcribe.png />
+                            </div>
+
+                            <div class="form-floating mb-3" style="margin-top: 15px;">
+                                <input id="emailField2" type="email" class="form-control" placeholder="name@example.com">
+                                <label for="floatingInput">电子邮件地址</label>
+                            </div>
+                            <div class="d-grid gap-2 unsubsBtnDiv">
+                                <button id="unsubsBtn2" class="btn btn-primary unsubsBtn" type="button">取消订阅</button>
+                                <button id="loadingBtn2" class="btn btn-primary unsubsBtn" style="visibility: visible; display: none;">
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                  
+                                </button>
+                            </div>
+                        </div>
+                </div>
+                <div class="tab-pane fade" id="nav-id" role="tabpanel" aria-labelledby="nav-id-tab" tabindex="0">
+                        <div style="margin-top: 10px;" class="row">
+
+                            <div>
+                                <b><p style="font-size:larger">Anda ingin berhenti berlangganan?</p></b>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <img src=~/images/icon-email-unsubcribe.png />
+                            </div>
+
+                            <div class="form-floating mb-3" style="margin-top: 15px;">
+                                <input id="emailField3" type="email" class="form-control" placeholder="name@example.com">
+                                <label for="floatingInput">&nbsp;&nbsp;Alamat email</label>
+                            </div>
+                            <div class="d-grid gap-2 unsubsBtnDiv">
+                                <button id="unsubsBtn3" class="btn btn-primary unsubsBtn" type="button">BERHENTI LANGGANAN</button>
+                                <button id="loadingBtn3" class="btn btn-primary unsubsBtn" style="visibility: visible; display: none;">
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                   
+                                </button>
+                            </div>
+                        </div>
+                </div>
+                <div class="tab-pane fade" id="nav-th" role="tabpanel" aria-labelledby="nav-th-tab" tabindex="0">
+                        <div style="margin-top: 10px;">
+                            <div>
+                                <b><p style="font-size:larger">คุณต้องการที่จะยกเลิกการสมัคร?</p></b>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <img src=~/images/icon-email-unsubcribe.png />
+                            </div>
+
+                            <div class="form-floating mb-3" style="margin-top: 15px;">
+                                <input id="emailField4" type="email" class="form-control" placeholder="name@example.com">
+                                <label for="floatingInput">ที่อยู่อีเมล</label>
+                            </div>
+                            <div class="d-grid gap-2 unsubsBtnDiv">
+                                <button id="unsubsBtn4" class="btn btn-primary unsubsBtn" type="button">ยกเลิกการสมัคร</button>
+                                <button id="loadingBtn4" class="btn btn-primary unsubsBtn" style="visibility: visible; display: none;">
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                   
+                                </button>
+                            </div>
+                        </div>
+                </div>
+                <div class="tab-pane fade" id="nav-vn" role="tabpanel" aria-labelledby="nav-vn-tab" tabindex="0">
+                        <div style="margin-top: 10px;">
+                            <div>
+                                <b><p style="font-size:larger">Bạn muốn huỷ đăng ký?</p></b>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <img src=~/images/icon-email-unsubcribe.png />
+                            </div>
+
+                            <div class="form-floating mb-3" style="margin-top: 15px;">
+                                <input id="emailField5" type="email" class="form-control" placeholder="name@example.com">
+                                <label for="floatingInput">Địa chỉ email</label>
+                            </div>
+                            <div class="d-grid gap-2 unsubsBtnDiv">
+                                <button id="unsubsBtn5" class="btn btn-primary unsubsBtn" type="button">HUỶ ĐĂNG KÝ</button>
+                                <button id="loadingBtn5" class="btn btn-primary unsubsBtn" style="display: none;">
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                   
+                                </button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+<script>
+    $(document).ready(function () { 
+
+        var currentLanguage = getUrlVars()["lang"];
+        console.log(currentLanguage);
+        if (!currentLanguage) currentLanguage = "en";
+        activeTab(currentLanguage.toLowerCase());
+        $('#unsubsBtn').click(function ()  {
+
+            $('#unsubsBtn').hide();
+            $('#loadingBtn').show();
+
+            $.ajax({
+                url: 'Unsubscribe/Unsubscribe',
+                type: 'POST',
+                data: { 'email': $('#emailField').val() },
+                success: function (result) {
+                    if (result) {
+                        setTimeout(() => {
+                           
+                            window.location.href = "Unsubscribe/Successful?lang=en";
+                        }, 5000);
+                        
+                    } else {
+                        $('#unsubsBtn').show();
+                        $('#loadingBtn').hide();
+                        alert('Invalid Email!');
+                    }
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        });
+
+        $('#unsubsBtn2').click(function () {
+
+            $('#unsubsBtn2').hide();
+            $('#loadingBtn2').show();
+
+            $.ajax({
+                url: 'Unsubscribe/Unsubscribe',
+                type: 'POST',
+                data: { 'email': $('#emailField2').val() },
+                success: function (result) {
+                    if (result) {
+                        setTimeout(() => {
+
+                            window.location.href = "Unsubscribe/Successful?lang=cn";
+                        }, 5000);
+
+                    } else {
+                        $('#unsubsBtn2').show();
+                        $('#loadingBtn2').hide();
+                        alert('Invalid Email!');
+                    }
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        });
+
+        $('#unsubsBtn3').click(function () {
+
+            $('#unsubsBtn3').hide();
+            $('#loadingBtn3').show();
+
+            $.ajax({
+                url: 'Unsubscribe/Unsubscribe',
+                type: 'POST',
+                data: { 'email': $('#emailField3').val() },
+                success: function (result) {
+                    if (result) {
+                        setTimeout(() => {
+
+                            window.location.href = "Unsubscribe/Successful?lang=id";
+                        }, 5000);
+
+                    } else {
+                        $('#unsubsBtn3').show();
+                        $('#loadingBtn3').hide();
+                        alert('Invalid Email!');
+                    }
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        });
+
+        $('#unsubsBtn4').click(function () {
+
+            $('#unsubsBtn4').hide();
+            $('#loadingBtn4').show();
+
+                $.ajax({
+                url: 'Unsubscribe/Unsubscribe',
+                type: 'POST',
+                data: { 'email': $('#emailField4').val() },
+                success: function (result) {
+                    if (result) {
+                        setTimeout(() => {
+
+                            window.location.href = "Unsubscribe/Successful?lang=th";
+                        }, 5000);
+
+                    } else {
+                        $('#unsubsBtn4').show();
+                        $('#loadingBtn4').hide();
+                        alert('Invalid Email!');
+                    }
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        });
+
+        $('#unsubsBtn5').click(function () {
+
+            $('#unsubsBtn5').hide();
+            $('#loadingBtn5').show();
+
+            $.ajax({
+                url: 'Unsubscribe/Unsubscribe',
+                type: 'POST',
+                data: { 'email': $('#emailField5').val() },
+                success: function (result) {
+                    if (result) {
+                        setTimeout(() => {
+
+                            window.location.href = "Unsubscribe/Successful?lang=vn";
+                        }, 5000);
+
+                    } else {
+                        $('#unsubsBtn5').show();
+                        $('#loadingBtn5').hide();
+                        alert('Invalid Email!');
+                    }
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        });
+    });
+
+   
+    function activeTab(lang){
+    
+        $('#nav-tab button[data-bs-target="#nav-' + lang + '"]').tab('show')
+    }
+    
+</script>
+
