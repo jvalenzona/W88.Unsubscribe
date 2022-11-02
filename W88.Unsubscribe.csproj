@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,17 +14,38 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\Controllers\UnsubscribeController.en.Designer.cs">
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Views\Unsubscribe\_SuccessView.en.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>UnsubscribeController.en.resx</DependentUpon>
+      <DependentUpon>_SuccessView.en.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Controllers\UnsubscribeController.en.resx">
+    <EmbeddedResource Update="Resources\Views\Unsubscribe\_SuccessView.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UnsubscribeController.en.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Unsubscribe</CustomToolNamespace>
+      <LastGenOutput>_SuccessView.en.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Unsubscribe\_SuccessView.id.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Unsubscribe</CustomToolNamespace>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Unsubscribe\_SuccessView.th.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Unsubscribe</CustomToolNamespace>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Unsubscribe\_SuccessView.vn.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Unsubscribe</CustomToolNamespace>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 

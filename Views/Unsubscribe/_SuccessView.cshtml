@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Unsubscribe Success";
+}
+
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+<div style="margin-top: 10px">
+    <b><p style="font-size:larger">@localizer["SuccessMsg"]</p></b>
+</div>
+ 
+<div style="margin-top: 15px">
+    <p style="font-size:small"><a href="#">@localizer["ClickHereMsg"]</a> @localizer["SubscribeBackMsg"]</p>
+</div>
+

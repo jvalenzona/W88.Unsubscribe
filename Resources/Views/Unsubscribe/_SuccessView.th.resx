@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="UnsubscribeLabel" xml:space="preserve">
-    <value>Do you want to unsubscribe?</value>
+  <data name="ClickHereMsg" xml:space="preserve">
+    <value>คลิกที่นี่</value>
+  </data>
+  <data name="SubscribeBackMsg" xml:space="preserve">
+    <value>เพื่อสมัครอีกครั้ง</value>
+  </data>
+  <data name="SuccessMsg" xml:space="preserve">
+    <value>ยกเลิกการสมัครสำเร็จ</value>
   </data>
 </root>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.Localization;
 using System.Text.RegularExpressions;
 using W88.Unsubscribe.Models;
 
@@ -51,6 +52,13 @@ namespace W88.Unsubscribe.Controllers
             {"EmailPlaceholderVN", "Địa chỉ email"}
         };
 
+
+        private readonly IStringLocalizer<UnsubscribeController> _localizer;
+
+        public UnsubscribeController(IStringLocalizer<UnsubscribeController> localizer)
+        {
+            _localizer = localizer;
+        }
         #endregion
 
         public IActionResult Index()
@@ -58,9 +66,9 @@ namespace W88.Unsubscribe.Controllers
             return View();
         }
 
-        public IActionResult Successful(string lang)
+        public IActionResult Successful()
         {
-            return View(GetSuccessViewTranslation(lang));
+            return View();
         }
 
         [HttpPost]
@@ -75,25 +83,11 @@ namespace W88.Unsubscribe.Controllers
             return Json(isSuccess);
         }
 
-        public UnsubscribeSuccessViewModel GetSuccessViewTranslation(string language)
-        {
-            UnsubscribeSuccessViewModel vm = new UnsubscribeSuccessViewModel();
-            string lang = !string.IsNullOrEmpty(language) ? language.ToUpper() : "EN";
-            var trans = successViewTranslations.Where(x => x.Key.EndsWith(lang));
-            if (trans != null)
-            {
-                vm.UnSubscribeSuccess = trans.FirstOrDefault(x => x.Key == $"SuccessMsg{lang}").Value;
-                vm.ClickHere = trans.FirstOrDefault(x => x.Key == $"ClickHereMsg{lang}").Value;
-                vm.SubscribeBack = trans.FirstOrDefault(x => x.Key == $"SubscribeBackMsg{lang}").Value;
-            }
-
-            return vm;
-        }
 
         #region Partial views
         public IActionResult _SuccessView(UnsubscribeSuccessViewModel model)
         {
-            return PartialView(model);
+            return PartialView();
         }
 
         public IActionResult _UnsubscribeFormView(UnsubscribeFormViewModel model)
