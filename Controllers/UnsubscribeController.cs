@@ -75,23 +75,25 @@ namespace W88.Unsubscribe.Controllers
             return Json(isSuccess);
         }
 
-        public UnsubscribeSuccessViewModel GetSuccessViewTranslation(string language)
+        public SuccessViewModel GetSuccessViewTranslation(string language)
         {
-            UnsubscribeSuccessViewModel vm = new UnsubscribeSuccessViewModel();
+            SuccessViewModel vm = new SuccessViewModel();
             string lang = !string.IsNullOrEmpty(language) ? language.ToUpper() : "EN";
             var trans = successViewTranslations.Where(x => x.Key.EndsWith(lang));
             if (trans != null)
             {
-                vm.UnSubscribeSuccess = trans.FirstOrDefault(x => x.Key == $"SuccessMsg{lang}").Value;
+                vm.SuccessMessage = trans.FirstOrDefault(x => x.Key == $"SuccessMsg{lang}").Value;
                 vm.ClickHere = trans.FirstOrDefault(x => x.Key == $"ClickHereMsg{lang}").Value;
-                vm.SubscribeBack = trans.FirstOrDefault(x => x.Key == $"SubscribeBackMsg{lang}").Value;
+                vm.RevertBack = trans.FirstOrDefault(x => x.Key == $"SubscribeBackMsg{lang}").Value;
+                vm.RevertBackUrl = $"/subscribe/successful?lang={lang}";
+                vm.IsUnsubscribe = true;
             }
 
             return vm;
         }
 
         #region Partial views
-        public IActionResult _SuccessView(UnsubscribeSuccessViewModel model)
+        public IActionResult _SuccessView(SuccessViewModel model)
         {
             return PartialView(model);
         }

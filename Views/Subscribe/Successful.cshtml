@@ -1,5 +1,4 @@
-﻿
-@model SuccessViewModel
+﻿@model SuccessViewModel
 
 @if (Model.IsUnsubscribe)
 {
@@ -14,5 +13,4 @@ else
     </div>
     
 }
-
 @await Html.PartialAsync("_SuccessView", Model)
